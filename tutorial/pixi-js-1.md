@@ -74,16 +74,21 @@ Here is your first PixiJS program. Note that we are importing the PixiJS library
 <head>
 	<meta charset="utf-8" />
 	<title>PixiJS-1</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/pixi.min.js"></script>
 </head>
 <body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.6.0/pixi.min.js"></script>
 <script>
 
 // #1 - Create a new Pixi application
 // http://pixijs.download/dev/docs/PIXI.Application.html
-const app = new PIXI.Application(600,400);
-
+const app = new PIXI.Application(
+    {
+	width: 600,
+	height: 400
+    }
+);
+	
 // #2 - Append its "view" (a <canvas> tag that it created for us) to the DOM
 document.body.appendChild(app.view); 
 
